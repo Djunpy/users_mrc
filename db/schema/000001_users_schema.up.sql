@@ -16,6 +16,7 @@ CREATE TABLE users (
     ban_reason TEXT,                            -- Причина блокировки пользователя.
     banned_at TIMESTAMPTZ,                       -- Время, когда пользователь был заблокирован.
     date_joined TIMESTAMPTZ DEFAULT NOW(),
+    sexy ENUM('f', 'm') NOT NULL
     UNIQUE (email)
 );
 
